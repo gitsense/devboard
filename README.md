@@ -16,19 +16,19 @@ Very basic JavaScript knowledge is all that is required to get started with DevB
 
 AI-friendly??? Yes, really. 
 
-Due to how DevBoard [packages](http://localhost:3357?board=welcome.packages), [boards](http://localhost:3357?board=welcome.boards) and [widgets](http://localhost:3357?board=welcome.widgets) work, it is very easy to take a divide-and-conquer approach to building with DevBoard. DevBoard is designed with a very strong separation of concerns, allowing for highly isolated development and testing. This should make constructing and refining AI prompts easier with DevBoard."
+Due to how DevBoard [packages](https://devboard.gitsense.com?board=welcome.packages), [boards](https://devboard.gitsense.com?board=welcome.boards) and [widgets](https://devboard.gitsense.com?board=welcome.widgets) work, it is very easy to take a divide-and-conquer approach to building with DevBoard. DevBoard is designed with a very strong separation of concerns, allowing for highly isolated development and testing. This should make constructing and refining AI prompts easier with DevBoard.
 
 ## Quick
 
 How quick? 
 
-It only takes a few minutes to create a full-stack widget.  DevBoard excels in fast prototyping, enabling you to test new ideas and gather requirements quickly. To learn more, take a look at the [full-stack hello-world widget](https://github.com/gitsense/hello-world/tree/main/widgets/fullstack) or try the [tutorial](http://localhost:3357?board=welcome.tutorial) that will walk you through the steps to create a configurable full-stack widget in less than five minutes.
+It only takes a few minutes to create a full-stack widget.  DevBoard excels in fast prototyping, enabling you to test new ideas and gather requirements quickly. To learn more, take a look at the [full-stack hello-world widget](https://github.com/gitsense/hello-world/tree/main/widgets/fullstack) or try the [tutorial](https://devboard.gitsense.com?board=welcome.tutorial) that will walk you through the steps to create a configurable full-stack widget in less than five minutes.
 
 ## Smart
 
 Smart, with examples!
 
-A DevBoard dashboard is comprised of widgets that can not only display data (charts, tables, etc.), but they can also be programmed to be [context aware](http://localhost:3357?board=welcome.demo#context-aware), [configurable](http://localhost:3357?board=welcome.demo#configurable), [communicate with one another](http://localhost:3357?board=welcome.demo#communicate) and more. With DevBoard, you can make your dashboards as smart as you need. And if you take a look at the [demo](http://localhost:3357?board=welcome.demo) document, you can see a smart document in action.
+A DevBoard dashboard is comprised of widgets that can not only display data (charts, tables, etc.), but they can also be programmed to be [context aware](https://devboard.gitsense.com?board=welcome.demo#context-aware), [configurable](https://devboard.gitsense.com?board=welcome.demo#configurable), [communicate with one another](https://devboard.gitsense.com?board=welcome.demo#communicate) and more. And if you take a look at the [demo](https://devboard.gitsense.com?board=welcome.demo) document, you can see an example of a smart document in action.
 
 
 ## Demo
@@ -37,11 +37,11 @@ A DevBoard dashboard is comprised of widgets that can not only display data (cha
 
 Here are some quick widget examples to help you better understand why you might want to create a dashboard, website, full-stack application and more with DevBoard.
 
-- [Smart documents](http://localhost:3357?board=welcome.demo#smart-docs)
-- [Context aware](http://localhost:3357?board=welcome.demo#context-aware)
-- [Configurable](http://localhost:3357?board=welcome.demo#configurable)
-- [Communicate](http://localhost:3357?board=welcome.demo#communicate)
-- [Server side data](http://localhost:3357?board=welcome.demo#server-side-data)
+- [Smart documents](https://devboard.gitsense.com?board=welcome.demo#smart-docs)
+- [Context aware](https://devboard.gitsense.com?board=welcome.demo#context-aware)
+- [Configurable](https://devboard.gitsense.com?board=welcome.demo#configurable)
+- [Communicate](https://devboard.gitsense.com?board=welcome.demo#communicate)
+- [Server side data](https://devboard.gitsense.com?board=welcome.demo#server-side-data)
 
 ### GitSense
 
@@ -51,7 +51,7 @@ Need a more complex example? No problem. GitSense is using DevBoard to re-imagin
 
 ### White-label
 
-DevBoard is designed to be yours! Just add a custom header and footer to the DevBoard [index.html](https://github.com/gitsense/devboard/tree/main/views/index.html) file to make it your own or embed DevBoard into your product or project. Watch the video below, to see how GitSense can seamless integrate with GitHub with the DevBoard [bundle](http://localhost:3357?board=welcome.publish) file and a Chrome extension.
+DevBoard is designed to be yours! Just add a custom header and footer to the DevBoard [index.html](https://github.com/gitsense/devboard/tree/main/views/index.html) file to make it your own or embed DevBoard into your product or project. Watch the video below, to see how GitSense can seamless integrate with GitHub with the DevBoard [bundle](https://devboard.gitsense.com?board=welcome.publish) file and a Chrome extension.
 
 
 ## Quick Start
@@ -86,7 +86,7 @@ For production, use a package like [forever](https://www.npmjs.com/package/forev
 
     forever server.js
 
-DevBoard can now be viewed at http://localhost:3357
+DevBoard can now be viewed at https://devboard.gitsense.com
 
 ## Roadmap
 

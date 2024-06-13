@@ -57,7 +57,7 @@ function renderHeader() {
 
 function renderMsg(renderTo) {
     msgBody.innerHTML = `
-        This <a href=/>widget</a> demonstrates how widgets can use other widgets to get server side data.  Click the button below to get the repo data for ${repo} from the example 2 widget.
+        This <a href=https://github.com/gitsense/devboard/tree/main/packages/welcome/widgets/server-side-data-example-1>widget</a> demonstrates how widgets can use other widgets to get server side data.  Click the button below to get the repo data for ${repo} from the example 2 widget.
     `;
 }
 

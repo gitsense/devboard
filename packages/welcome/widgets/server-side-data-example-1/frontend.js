@@ -48,7 +48,7 @@ function renderHeader() {
 
 function renderMsg() {
     msgBody.innerHTML = `
-        This <a href=>widget</a> demonstrates how you can program a widget to return server side data with just a few lines of code.  Click the button below to make a fetch call to this widget's server side data endpoint.
+        This <a href=https://github.com/gitsense/devboard/tree/main/packages/welcome/widgets/server-side-data-example-1>widget</a> demonstrates how you can program a widget to return server side data with just a few lines of code.  Click the button below to make a fetch call to this widget's server side data endpoint.
     `;
 }
 

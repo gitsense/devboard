@@ -1,6 +1,6 @@
 # Widgets
 
-Widgets are comprised of Node.js modules that can render [board](http://localhost:3357?board=welcome.boards) data and process client/server-side requests.
+Widgets are comprised of Node.js modules that can render data to a [board](https://devboard.gitsense.com?board=welcome.boards) and process client/server-side requests.
 
 - [Help](#help)
 - [Create](#create)
@@ -33,7 +33,7 @@ First, create the package "widgets" directory if one does not exist. For example
         /acme       <-- package directory
           /widgets  <-- package widgets directory
 
-To learn more, please refer to the [packages](http://localhost:3357?board=welcome.packages) document.
+To learn more, please refer to the [packages](https://devboard.gitsense.com?board=welcome.packages) document.
 
 <a name=create-widget-dir></a>
 ### 2. Widget directory

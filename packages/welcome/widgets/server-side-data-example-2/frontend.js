@@ -46,7 +46,7 @@ function renderHeader() {
 
 function renderMsg() {
     msgBody.innerHTML = `
-        This <a href=>widget</a> demonstrates how you can create widgets that are soley designed to serve server side data. Click the button below to hide this widget and to enable the button in example 3.
+        This <a href=https://github.com/gitsense/devboard/tree/main/packages/welcome/widgets/server-side-data-example-2>widget</a> demonstrates how you can create widgets that are soley designed to serve server side data. Click the button below to hide this widget and to enable the button in example 3.
     `;
 }
 
