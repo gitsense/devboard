@@ -8,3 +8,5 @@ app/widgets.js
 libs/widgets.js
 packages/*
 !packages/welcome
+public/js/devboard.js
+public/js/devboard.min.js
