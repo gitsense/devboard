@@ -1,0 +1,13 @@
+{
+    "name": "packages",
+    "displayName": "Packages",
+    "widgets": [
+        {
+            "fullName": "welcome.markdown",
+            "cols": 12,
+            "params": {
+                "path": "docs/packages.md"
+            }
+        }
+    ]
+}

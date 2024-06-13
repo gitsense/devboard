@@ -1,0 +1,28 @@
+{
+    "header": {
+        "show": true
+    },
+    "menu": {
+        "boards": [
+            { "fullName": "welcome.about", "default": true },
+            { "fullName": "welcome.packages" },
+            { "fullName": "welcome.boards" },
+            { "fullName": "welcome.widgets" },
+            { "fullName": "welcome.publish" },
+            { "fullName": "welcome.demo" },
+            { "fullName": "welcome.tutorial" }
+        ]
+    },
+    "quickLinks": {
+        "boards": [
+            { "fullName": "welcome.about" },
+            { "fullName": "welcome.packages" },
+            { "fullName": "welcome.boards" },
+            { "fullName": "welcome.widgets" },
+            { "fullName": "welcome.publish" },
+            { "fullName": "welcome.demo" },
+            { "fullName": "welcome.tutorial" },
+            { "fullName": "", "text": "GitHub", "href": "https://github.com/gitsense/devboard" }
+        ]
+    }
+}

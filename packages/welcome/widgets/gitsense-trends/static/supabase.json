@@ -1,0 +1,328 @@
+{
+    "trends": {
+        "contributors": [
+            {
+                "win_id": 0,
+                "total": 642,
+                "trend_min": 624,
+                "trend_max": 750,
+                "trend_avg": 674,
+                "percentage_of_max": 86,
+                "trending_percentage": -5
+            },
+            {
+                "win_id": 1,
+                "total": 750,
+                "trend_min": 624,
+                "trend_max": 750,
+                "trend_avg": 674,
+                "percentage_of_max": 100,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 2,
+                "total": 637,
+                "trend_min": 624,
+                "trend_max": 750,
+                "trend_avg": 674,
+                "percentage_of_max": 85,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 3,
+                "total": 713,
+                "trend_min": 624,
+                "trend_max": 750,
+                "trend_avg": 674,
+                "percentage_of_max": 95,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 4,
+                "total": 646,
+                "trend_min": 624,
+                "trend_max": 750,
+                "trend_avg": 674,
+                "percentage_of_max": 86,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 5,
+                "total": 624,
+                "trend_min": 624,
+                "trend_max": 750,
+                "trend_avg": 674,
+                "percentage_of_max": 83,
+                "trending_percentage": null
+            }
+        ],
+        "new_contributors": [
+            {
+                "win_id": 0,
+                "total": 431,
+                "trend_min": 401,
+                "trend_max": 548,
+                "trend_avg": 472,
+                "percentage_of_max": 79,
+                "trending_percentage": -9
+            },
+            {
+                "win_id": 1,
+                "total": 548,
+                "trend_min": 401,
+                "trend_max": 548,
+                "trend_avg": 472,
+                "percentage_of_max": 100,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 2,
+                "total": 440,
+                "trend_min": 401,
+                "trend_max": 548,
+                "trend_avg": 472,
+                "percentage_of_max": 80,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 3,
+                "total": 526,
+                "trend_min": 401,
+                "trend_max": 548,
+                "trend_avg": 472,
+                "percentage_of_max": 96,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 4,
+                "total": 447,
+                "trend_min": 401,
+                "trend_max": 548,
+                "trend_avg": 472,
+                "percentage_of_max": 82,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 5,
+                "total": 401,
+                "trend_min": 401,
+                "trend_max": 548,
+                "trend_avg": 472,
+                "percentage_of_max": 73,
+                "trending_percentage": null
+            }
+        ],
+        "iscore": [
+            {
+                "win_id": 0,
+                "trend_min": 37631,
+                "trend_max": 45822,
+                "trend_avg": 41055,
+                "total": 36129,
+                "percentage_of_max": 79,
+                "trending_percentage": -12
+            },
+            {
+                "win_id": 1,
+                "trend_min": 37631,
+                "trend_max": 45822,
+                "trend_avg": 41055,
+                "total": 45822,
+                "percentage_of_max": 100,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 2,
+                "trend_min": 37631,
+                "trend_max": 45822,
+                "trend_avg": 41055,
+                "total": 37631,
+                "percentage_of_max": 82,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 3,
+                "trend_min": 37631,
+                "trend_max": 45822,
+                "trend_avg": 41055,
+                "total": 38464,
+                "percentage_of_max": 84,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 4,
+                "trend_min": 37631,
+                "trend_max": 45822,
+                "trend_avg": 41055,
+                "total": 38100,
+                "percentage_of_max": 83,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 5,
+                "trend_min": 37631,
+                "trend_max": 45822,
+                "trend_avg": 41055,
+                "total": 45259,
+                "percentage_of_max": 99,
+                "trending_percentage": null
+            }
+        ],
+        "iscore_gap": [
+            {
+                "win_id": 0,
+                "trend_min": 61.70924198991255,
+                "trend_max": 63.98662228280144,
+                "trend_avg": 62.7020552174572,
+                "total": 60.22336356390957,
+                "percentage_of_max": 94,
+                "trending_percentage": -4
+            },
+            {
+                "win_id": 1,
+                "trend_min": 61.70924198991255,
+                "trend_max": 63.98662228280144,
+                "trend_avg": 62.7020552174572,
+                "total": 63.14403508379722,
+                "percentage_of_max": 99,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 2,
+                "trend_min": 61.70924198991255,
+                "trend_max": 63.98662228280144,
+                "trend_avg": 62.7020552174572,
+                "total": 62.62065882975101,
+                "percentage_of_max": 98,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 3,
+                "trend_min": 61.70924198991255,
+                "trend_max": 63.98662228280144,
+                "trend_avg": 62.7020552174572,
+                "total": 62.04971790102377,
+                "percentage_of_max": 97,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 4,
+                "trend_min": 61.70924198991255,
+                "trend_max": 63.98662228280144,
+                "trend_avg": 62.7020552174572,
+                "total": 61.70924198991255,
+                "percentage_of_max": 96,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 5,
+                "trend_min": 61.70924198991255,
+                "trend_max": 63.98662228280144,
+                "trend_avg": 62.7020552174572,
+                "total": 63.98662228280144,
+                "percentage_of_max": 100,
+                "trending_percentage": null
+            }
+        ],
+        "stargazzers": [
+            {
+                "win_id": 0,
+                "total": 1612,
+                "trend_min": 1676,
+                "trend_max": 1872,
+                "trend_avg": 1792,
+                "percentage_of_max": 86,
+                "trending_percentage": -10
+            },
+            {
+                "win_id": 1,
+                "total": 1872,
+                "trend_min": 1676,
+                "trend_max": 1872,
+                "trend_avg": 1792,
+                "percentage_of_max": 100,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 2,
+                "total": 1749,
+                "trend_min": 1676,
+                "trend_max": 1872,
+                "trend_avg": 1792,
+                "percentage_of_max": 93,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 3,
+                "total": 1676,
+                "trend_min": 1676,
+                "trend_max": 1872,
+                "trend_avg": 1792,
+                "percentage_of_max": 90,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 4,
+                "total": 1868,
+                "trend_min": 1676,
+                "trend_max": 1872,
+                "trend_avg": 1792,
+                "percentage_of_max": 100,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 5,
+                "total": 1793,
+                "trend_min": 1676,
+                "trend_max": 1872,
+                "trend_avg": 1792,
+                "percentage_of_max": 96,
+                "trending_percentage": null
+            }
+        ]
+    },
+    "wins": [
+        {
+            "id": 0,
+            "min_date": "2024-04-25",
+            "max_date": "2024-05-25",
+            "min_date_time": "2024-04-25T04:47:15.462577",
+            "max_date_time": "2024-05-25T04:47:15.462577"
+        },
+        {
+            "id": 1,
+            "min_date": "2024-03-26",
+            "max_date": "2024-04-25",
+            "min_date_time": "2024-03-26T04:47:15.462577",
+            "max_date_time": "2024-04-25T04:47:15.462577"
+        },
+        {
+            "id": 2,
+            "min_date": "2024-02-25",
+            "max_date": "2024-03-26",
+            "min_date_time": "2024-02-25T04:47:15.462577",
+            "max_date_time": "2024-03-26T04:47:15.462577"
+        },
+        {
+            "id": 3,
+            "min_date": "2024-01-26",
+            "max_date": "2024-02-25",
+            "min_date_time": "2024-01-26T04:47:15.462577",
+            "max_date_time": "2024-02-25T04:47:15.462577"
+        },
+        {
+            "id": 4,
+            "min_date": "2023-12-27",
+            "max_date": "2024-01-26",
+            "min_date_time": "2023-12-27T04:47:15.462577",
+            "max_date_time": "2024-01-26T04:47:15.462577"
+        },
+        {
+            "id": 5,
+            "min_date": "2023-11-27",
+            "max_date": "2023-12-27",
+            "min_date_time": "2023-11-27T04:47:15.462577",
+            "max_date_time": "2023-12-27T04:47:15.462577"
+        }
+    ]
+}
