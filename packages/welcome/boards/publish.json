@@ -1,0 +1,13 @@
+{
+    "name": "publish",
+    "displayName": "Publish",
+    "widgets": [
+        {
+            "fullName": "welcome.markdown",
+            "cols": 12,
+            "params": {
+                "path": "docs/publish.md"
+            }
+        }
+    ]
+}

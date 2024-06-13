@@ -1,0 +1,104 @@
+{
+    "trends": {
+        "contributors": [
+            {
+                "win_id": 0,
+                "total": 1602,
+                "trend_min": 1203,
+                "trend_max": 1716,
+                "trend_avg": 1517,
+                "percentage_of_max": 48,
+                "trending_percentage": -46
+            },
+            {
+                "win_id": 1,
+                "total": 1716,
+                "trend_min": 1203,
+                "trend_max": 1716,
+                "trend_avg": 1517,
+                "percentage_of_max": 100,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 2,
+                "total": 1608,
+                "trend_min": 1203,
+                "trend_max": 1716,
+                "trend_avg": 1517,
+                "percentage_of_max": 94,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 3,
+                "total": 1700,
+                "trend_min": 1203,
+                "trend_max": 1716,
+                "trend_avg": 1517,
+                "percentage_of_max": 99,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 4,
+                "total": 1616,
+                "trend_min": 1203,
+                "trend_max": 1716,
+                "trend_avg": 1517,
+                "percentage_of_max": 94,
+                "trending_percentage": null
+            },
+            {
+                "win_id": 5,
+                "total": 1203,
+                "trend_min": 1203,
+                "trend_max": 1716,
+                "trend_avg": 1517,
+                "percentage_of_max": 55,
+                "trending_percentage": null
+            }
+        ]
+    },
+    "wins": [
+        {
+            "id": 0,
+            "min_date": "2024-04-25",
+            "max_date": "2024-05-25",
+            "min_date_time": "2024-04-25T04:47:47.653661",
+            "max_date_time": "2024-05-25T04:47:47.653661"
+        },
+        {
+            "id": 1,
+            "min_date": "2024-03-26",
+            "max_date": "2024-04-25",
+            "min_date_time": "2024-03-26T04:47:47.653661",
+            "max_date_time": "2024-04-25T04:47:47.653661"
+        },
+        {
+            "id": 2,
+            "min_date": "2024-02-25",
+            "max_date": "2024-03-26",
+            "min_date_time": "2024-02-25T04:47:47.653661",
+            "max_date_time": "2024-03-26T04:47:47.653661"
+        },
+        {
+            "id": 3,
+            "min_date": "2024-01-26",
+            "max_date": "2024-02-25",
+            "min_date_time": "2024-01-26T04:47:47.653661",
+            "max_date_time": "2024-02-25T04:47:47.653661"
+        },
+        {
+            "id": 4,
+            "min_date": "2023-12-27",
+            "max_date": "2024-01-26",
+            "min_date_time": "2023-12-27T04:47:47.653661",
+            "max_date_time": "2024-01-26T04:47:47.653661"
+        },
+        {
+            "id": 5,
+            "min_date": "2023-11-27",
+            "max_date": "2023-12-27",
+            "min_date_time": "2023-11-27T04:47:47.653661",
+            "max_date_time": "2023-12-27T04:47:47.653661"
+        }
+    ]
+}

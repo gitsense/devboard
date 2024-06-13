@@ -1,0 +1,182 @@
+{
+    "name": "demo",
+    "displayName": "Demo",
+    "widgets": [
+        {
+            "fullName": "welcome.alert",
+            "cols": 12,
+            "params": {
+                "id": "demo-show-help",
+                "icon": "lightBulb",
+                "msg": "Set 'Help' to 'show' in the top-right hand corner to display the widget's help link."
+            }
+        },
+        {
+            "fullName": "welcome.markdown",
+            "cols": 12,
+            "params": {
+                "path": "packages/welcome/docs/demo.md"
+            }
+        },
+        {
+            "fullName": "welcome.markdown",
+            "cols": 12,
+            "params": {
+                "path": "packages/welcome/docs/smart-docs.md"
+            }
+        },
+        {
+            "fullName": "welcome.context-aware",
+            "cols": 12
+        },
+        {
+            "fullName": "welcome.context-aware-card",
+            "cols": 4,
+            "colStyle": {
+                "paddingTop": "0px",
+                "marginTop": "0px"
+            },
+            "params": {
+                "type": "issues"
+            }
+        },
+        {
+            "fullName": "welcome.context-aware-card",
+            "cols": 4,
+            "colStyle": {
+                "paddingTop": "0px",
+                "marginTop": "0px"
+            },
+            "params": {
+                "type": "stars"
+            }
+        },
+        {
+            "fullName": "welcome.context-aware-card",
+            "cols": 4,
+            "colStyle": {
+                "paddingTop": "0px",
+                "marginTop": "0px"
+            },
+            "params": {
+                "type": "forks"
+            }
+        },
+        {
+            "fullName": "welcome.markdown",
+            "cols": 12,
+            "colStyle": {
+                "paddingTop": "0px",
+                "marginTop": "0px"
+            },
+            "params": {
+                "path": "packages/welcome/docs/configurable.md"
+            }
+        },
+        {
+            "fullName": "welcome.gitsense-trends",
+            "cols": 4,
+            "params": {
+                "id": 1, 
+                "trend": "contributors",
+                "chart": {
+                    "type": "line",
+                    "height": 225 
+                },
+                "org": { 
+                    "name": "Supabase",
+                    "login": "supabase",
+                    "avatar": "https://avatars.githubusercontent.com/u/54469796?s=200&v=4"
+                }
+            }
+        },
+        {
+            "fullName": "welcome.gitsense-trends",
+            "cols": 4,
+            "params": {
+                "id": 2, 
+                "trend": "contributors",
+                "chart": {
+                    "type": "bar",
+                    "height": 225
+                },
+                "org": { 
+                    "name": "Vercel",
+                    "login": "vercel",
+                    "avatar": "https://avatars.githubusercontent.com/u/14985020?s=200&v=4"
+                }
+            }
+        },
+        {
+            "fullName": "welcome.gitsense-trends",
+            "cols": 4,
+            "params": {
+                "id": 3, 
+                "trend": "contributors",
+                "chart": {
+                    "type": "scatter",
+                    "height": 225
+                },
+                "org": { 
+                    "name": "Deno",
+                    "login": "denoland",
+                    "avatar": "https://avatars.githubusercontent.com/u/42048915?s=200&v=4"
+                }
+            }
+        },
+        {
+            "fullName": "welcome.markdown",
+            "cols": 12,
+            "colStyle": {
+                "marginTop": "12px"
+            },
+            "params": {
+                "path": "packages/welcome/docs/communicate.md"
+            }
+        },
+        {
+            "fullName": "welcome.communicate-hello",
+            "cols": 6,
+            "colStyle": {
+                "paddingTop": "0px",
+                "marginTop": "5px"
+            },
+            "params": {
+                "position": "left"
+            }
+        },
+        {
+            "fullName": "welcome.communicate-hello",
+            "cols": 6,
+            "colStyle": {
+                "paddingTop": "0px",
+                "marginTop": "5px"
+            },
+            "params": {
+                "position": "right"
+            }
+        },
+        {
+            "fullName": "welcome.markdown",
+            "cols": 12,
+            "colStyle": {
+                "marginTop": "12px"
+            },
+            "params": {
+                "path": "packages/welcome/docs/server-side-data.md"
+            }
+        },
+        {
+            "fullName": "welcome.server-side-data-example-1",
+            "cols": 4
+        },
+        {
+            "fullName": "welcome.server-side-data-example-2",
+            "cols": 4
+        },
+        {
+            "fullName": "welcome.server-side-data-example-3",
+            "cols": 4
+        }
+    ]
+}

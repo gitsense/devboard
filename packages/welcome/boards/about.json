@@ -1,0 +1,13 @@
+{
+    "name": "about",
+    "displayName": "About",
+    "widgets": [
+        {
+            "fullName": "welcome.markdown",
+            "cols": 12,
+            "params": {
+                "path": "README.md"
+            }
+        }
+    ]
+}
