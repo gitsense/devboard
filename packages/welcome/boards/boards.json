@@ -1,0 +1,13 @@
+{
+    "name": "boards",
+    "displayName": "Boards",
+    "widgets": [
+        {
+            "fullName": "welcome.markdown",
+            "cols": 12,
+            "params": {
+                "path": "docs/boards.md"
+            }
+        }
+    ]
+}
