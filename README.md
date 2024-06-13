@@ -100,4 +100,3 @@ Authentication and advanced layout are the current biggest priorities.
 - Widgets hub
 - Typescript support
 - ESM support
->>>>>>> 27f9fa2 (Initial import)
