@@ -1,3 +1,6 @@
 {
-    "name": "server-side-data"
+    "name": "server-side-data",
+    "help": {
+        "link": "https://github.com/gitsense/devboard/tree/main/packages/welcome/widgets/server-side-data"
+    }
 }
