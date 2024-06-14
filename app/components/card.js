@@ -5,7 +5,7 @@ const defaultColStyle = {
     marginTop: "0px" 
 };
 
-function Card(widget, dashboardConfig, showHelp=false) {
+function Card(boardBlock, boardWidget, showHelp=false) {
     const { 
         minHeight, 
         cols=12, 
@@ -14,10 +14,10 @@ function Card(widget, dashboardConfig, showHelp=false) {
         cardCSS="tblr-card", 
         cardStyle, 
         cardBodyCSS="tblr-card-body",
-    } = dashboardConfig;
+    } = boardBlock;
 
     const _card = {
-        widget,
+        widget: boardWidget,
         body: null,
         main: null,
         help: null,
@@ -76,14 +76,14 @@ function Card(widget, dashboardConfig, showHelp=false) {
             if ( !showHelp )
                 return this;
 
-            const { align="left", link: href, text } = widget.config.help;
+            const { align="left", link: href, text } = boardWidget.config.help;
 
             if ( !href )
                 return this;
 
             const link = h.createLink({
                 href,
-                text: text || widget.fullName,
+                text: text || boardWidget.fullName,
                 target: "_blank"
             });
 

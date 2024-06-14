@@ -1,9 +1,9 @@
 {
     "name": "boards",
     "displayName": "Boards",
-    "widgets": [
+    "blocks": [
         {
-            "fullName": "welcome.markdown",
+            "widget": "welcome.markdown",
             "cols": 12,
             "params": {
                 "path": "docs/boards.md"

@@ -31,23 +31,23 @@ readdirSync("./packages").forEach(name => {
             return;
 
         const board = JSON.parse(readFileSync(file, "utf8"));
-        const { name: boardName, displayName, widgets } = board;
+        const { name: boardName, displayName, blocks } = board;
 
         if ( boardName === undefined ) {
-            console.log(`ERROR: ${file} does not have name attribute. Skipping board file.`);
+            console.log(`ERROR: ${file} does not have a name attribute. Skipping board file.`);
             return;
         }
 
         if ( !boardName.match(/^[a-z0-9_-]+$/) )
             throw(`ERROR: Invalid board name in ${file}. Only alphanumeric, dash and underscore characters allowed`);
 
-        if ( !widgets ) {
-            console.log(`ERROR: ${file} does not have name widgets attribute. Skipping board file.`);
+        if ( !blocks ) {
+            console.log(`ERROR: ${file} does not have a blocks attribute. Skipping board file.`);
             return;
         }
 
-        if ( !Array.isArray(widgets) ) {
-            console.log(`ERROR: widgets attribute in ${file} is not an array. Skipping board file.`);
+        if ( !Array.isArray(blocks) ) {
+            console.log(`ERROR: blocks attribute in ${file} is not an array. Skipping board file.`);
             return;
         }
 
@@ -56,51 +56,35 @@ readdirSync("./packages").forEach(name => {
             board.displayName = boardName;
         }
 
-        const fullName = package.name+"."+board.name;
+        const boardFullName = package.name+"."+board.name;
 
-        if ( boards[fullName] ) 
-            throw(`ERROR: Board with the full name ${fullName} already exists`);
+        if ( boards[boardFullName] ) 
+            throw(`ERROR: Board with the full name ${boardFullName} already exists`);
 
         board.package = package.name;
-        boards[fullName] = board;
-        defaultConfig.menu.boards.push({ fullName });
+        boards[boardFullName] = board;
+        defaultConfig.menu.boards.push({ boardFullName });
     });
 });
 
 write("// Execute 'npm run build:boards' to update this file\n", false);
 write("const boards = {};\n\n", true);
 
-for ( let fullName in boards ) {
-    const board = boards[fullName];
-    const { requiresBoardWidgets: requires } = board;
+for ( let boardFullName in boards ) {
+    const board = boards[boardFullName];
+    const { blocks } = board;
 
-    if ( requires ) {
-        const requiresBoard = boards[requires];
+    blocks.forEach(block => {
+        const { widget } = block;
 
-        if ( !requiresBoard  )
-            throw(`ERROR: ${fullName} requires ${requires} but it doesn't exist!`);
+        if ( !widget )
+            throw(`ERROR: No widget property for board block\n${(JSON.stringify(block, null, 2))}`);
 
-        const { widgets: boardWidgets } = requiresBoard;
-
-        for ( let i = boardWidgets.length - 1; i >= 0; i-- ) {
-            const widget = boardWidgets[i];
-            board.widgets.unshift(widget);
-        };
-    }
-
-    const { widgets: boardWidgets } = board;
-
-    boardWidgets.forEach(widget => {
-        const { fullName } = widget;
-
-        if ( !fullName )
-            throw(`ERROR: No fullName property for widget\n${(JSON.stringify(widget, null, 2))}`);
-
-        if ( !widgets[fullName] )
-            throw(`ERROR: No widget named "${fullName}" found in the board "${(board.package+"."+board.name)}"`);
+        if ( !widgets[widget] )
+            throw(`ERROR: No widget named "${widget}" found in the board "${(board.package+"."+board.name)}"`);
     });
 
-    write(`boards["${fullName}"] = ${(JSON.stringify(board, null, 2))};\n\n`, true);
+    write(`boards["${boardFullName}"] = ${(JSON.stringify(board, null, 2))};\n\n`, true);
 }
 
 const boardConfigFiles = [ 
@@ -125,10 +109,10 @@ boardConfigFiles.forEach(file => {
         const { fullName } = board;
     
         if ( !fullName )
-            throw(`ERROR: No fullName property for ${(JSON.stringify(board))}`);
+            throw(`ERROR: No fullName property for board ${(JSON.stringify(board))}`);
     
         if ( !boards[fullName] )
-            throw(`ERROR: No board name ${fullName} found`);
+            throw(`ERROR: No board with the name ${fullName} found`);
     });
 });
 

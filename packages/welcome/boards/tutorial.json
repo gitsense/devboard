@@ -1,9 +1,9 @@
 {
     "name": "tutorial",
     "displayName": "Tutorial",
-    "widgets": [
+    "blocks": [
         {
-            "fullName": "welcome.markdown",
+            "widget": "welcome.markdown",
             "cols": 12,
             "params": {
                 "path": "docs/tutorial.md"

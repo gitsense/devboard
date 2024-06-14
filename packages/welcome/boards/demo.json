@@ -1,9 +1,9 @@
 {
     "name": "demo",
     "displayName": "Demo",
-    "widgets": [
+    "blocks": [
         {
-            "fullName": "welcome.alert",
+            "widget": "welcome.alert",
             "cols": 12,
             "params": {
                 "id": "demo-show-help",
@@ -12,25 +12,25 @@
             }
         },
         {
-            "fullName": "welcome.markdown",
+            "widget": "welcome.markdown",
             "cols": 12,
             "params": {
                 "path": "packages/welcome/docs/demo.md"
             }
         },
         {
-            "fullName": "welcome.markdown",
+            "widget": "welcome.markdown",
             "cols": 12,
             "params": {
                 "path": "packages/welcome/docs/smart-docs.md"
             }
         },
         {
-            "fullName": "welcome.context-aware",
+            "widget": "welcome.context-aware",
             "cols": 12
         },
         {
-            "fullName": "welcome.context-aware-card",
+            "widget": "welcome.context-aware-card",
             "cols": 4,
             "colStyle": {
                 "paddingTop": "0px",
@@ -41,7 +41,7 @@
             }
         },
         {
-            "fullName": "welcome.context-aware-card",
+            "widget": "welcome.context-aware-card",
             "cols": 4,
             "colStyle": {
                 "paddingTop": "0px",
@@ -52,7 +52,7 @@
             }
         },
         {
-            "fullName": "welcome.context-aware-card",
+            "widget": "welcome.context-aware-card",
             "cols": 4,
             "colStyle": {
                 "paddingTop": "0px",
@@ -63,7 +63,7 @@
             }
         },
         {
-            "fullName": "welcome.markdown",
+            "widget": "welcome.markdown",
             "cols": 12,
             "colStyle": {
                 "paddingTop": "0px",
@@ -74,7 +74,7 @@
             }
         },
         {
-            "fullName": "welcome.gitsense-trends",
+            "widget": "welcome.gitsense-trends",
             "cols": 4,
             "params": {
                 "id": 1, 
@@ -91,7 +91,7 @@
             }
         },
         {
-            "fullName": "welcome.gitsense-trends",
+            "widget": "welcome.gitsense-trends",
             "cols": 4,
             "params": {
                 "id": 2, 
@@ -108,7 +108,7 @@
             }
         },
         {
-            "fullName": "welcome.gitsense-trends",
+            "widget": "welcome.gitsense-trends",
             "cols": 4,
             "params": {
                 "id": 3, 
@@ -125,7 +125,7 @@
             }
         },
         {
-            "fullName": "welcome.markdown",
+            "widget": "welcome.markdown",
             "cols": 12,
             "colStyle": {
                 "marginTop": "12px"
@@ -135,7 +135,7 @@
             }
         },
         {
-            "fullName": "welcome.communicate-hello",
+            "widget": "welcome.communicate-hello",
             "cols": 6,
             "colStyle": {
                 "paddingTop": "0px",
@@ -146,7 +146,7 @@
             }
         },
         {
-            "fullName": "welcome.communicate-hello",
+            "widget": "welcome.communicate-hello",
             "cols": 6,
             "colStyle": {
                 "paddingTop": "0px",
@@ -157,7 +157,7 @@
             }
         },
         {
-            "fullName": "welcome.markdown",
+            "widget": "welcome.markdown",
             "cols": 12,
             "colStyle": {
                 "marginTop": "12px"
@@ -167,15 +167,15 @@
             }
         },
         {
-            "fullName": "welcome.server-side-data-example-1",
+            "widget": "welcome.server-side-data-example-1",
             "cols": 4
         },
         {
-            "fullName": "welcome.server-side-data-example-2",
+            "widget": "welcome.server-side-data-example-2",
             "cols": 4
         },
         {
-            "fullName": "welcome.server-side-data-example-3",
+            "widget": "welcome.server-side-data-example-3",
             "cols": 4
         }
     ]
