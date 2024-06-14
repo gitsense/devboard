@@ -160,9 +160,9 @@ and in the boards directory, create a file called "board-3.json" with the follow
     {
         "name": "board-3",
         "displayName": "Layout 3",
-        "widgets": [
+        "blocks": [
             {
-                "fullName": "hello-world.configurable",
+                "widget": "hello-world.configurable",
                 "cols": "6",
                 "params": {
                     "textAlign": "left",
@@ -170,7 +170,7 @@ and in the boards directory, create a file called "board-3.json" with the follow
                 }
             },
             {
-                "fullName": "hello-world.configurable",
+                "widget": "hello-world.configurable",
                 "cols": "6",
                 "params": {
                     "textAlign": "right",
@@ -178,7 +178,7 @@ and in the boards directory, create a file called "board-3.json" with the follow
                 }
             },
             {
-                "fullName": "hello-world.configurable",
+                "widget": "hello-world.configurable",
                 "cols": "12"
             }
         ]

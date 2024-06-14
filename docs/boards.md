@@ -1,15 +1,15 @@
 # Boards
 
-A board is comprised of one or more widget blocks arranged in grid system.
+A board is composed of one or more widget blocks arranged in a grid system.
 
 - [Create](#create)
     - [Boards directory](#create-boards-dir)
     - [Board](#board)
         - [name](#name)
         - [displayName](#displayName)
-        - [widgets](#widgets)
+        - [blocks](#blocks)
     - [Widget block](#widget-block)
-        - [fullName](#fullName)
+        - [widget](#widget)
         - [cols](#cols)
         - [colStyle](#colStyle)
         - [params](#params)
@@ -24,14 +24,14 @@ A board is comprised of one or more widget blocks arranged in grid system.
 <a name=create-boards-dir></a>
 ### 1. Boards directory
 
-First, create the package "boards" directory if one does not exist. For example, if you would like to create a board in the "acme" package, the path to the "boards" directory would be:
+First, create the package "boards" directory if one does not exist. For example, if you would like to create a board in the "acme" package, the path to the "acme boards" directory would be:
 
     /<devboard>    <-- installation directory
       /packages    <-- packages directory
         /acme      <-- package directory
           /boards  <-- package boards directory
 
-To learn more, please refer to the [Packages]() document.
+To learn more, please refer to the [Packages](http://devboard.gitsense.com?board=welcome.packages) document.
 
 <a name=board></a>
 ### 2. Board
@@ -41,7 +41,7 @@ To create a board, create a file called `<board name>.json` in the package "boar
     {
         "name":        String, (required)
         "displayName": String, (optional)
-        "widgets":     Array   (required)
+        "blocks":      Array   (required)
     }
 
 <a name=name></a>
@@ -54,22 +54,22 @@ Required. The name of the board. Note, name can only contain alphanumeric, dash 
 
 Optional. The name to display. If not defined, the widget's name will be used.
 
-<a name=widgets></a>
-#### widgets
+<a name=blocks></a>
+#### blocks
 
-Required. One or more widget blocks. Note, you can references the same widget more than once. For example, you can have something like:
+Required. One or more widget blocks. Note, a block can reference the same widget more than once. For example, you can have something like:
 
-    "widgets": [
+    "blocks": [
         {
-            "fullName": "hello.world",
+            "widget": "hello.world",
             "cols": 6
         },
         {
-            "fullName": "hello.world",
+            "widget": "hello.world",
             "cols": 3
         },
         {
-            "fullName": "hello.world",
+            "widget": "hello.world",
             "cols": 3
         }
     ]
@@ -82,14 +82,14 @@ which references the "hello.world" widget three times. Please refer to "params" 
 A board widget block has the following properites:
 
     {
-        "fullName":  String,   (required)
+        "widget":    String,   (required)
         "cols":      Integer,  (required)
         "colStyle":  Object,   (optional)
         "params":    Object    (optional)
     }
 
-<a name=fullName></a>
-#### fullName
+<a name=widget></a>
+#### widget
 
 Required. The widget's full name written as `<package>.<widget>`. For example, if the full name was "hello.world", the package would be "hello" and the widget would be "world".
 
@@ -100,11 +100,11 @@ Required. Defines the the number of columns to occupy, with min=1 and max=12. No
 
     "widgets": [
         {
-            "fullName": "hello.world",
+            "widget": "hello.world",
             "cols": 8
         },
         {
-            "fullName": "hello.world",
+            "widget": "hello.world",
             "cols": 8
         }
     ]
@@ -182,7 +182,7 @@ A board object contains the following properties
 
 ##### fullName
 
-Required. The full name of the board.
+Required. The board's full name.
 
 ##### default
 
@@ -232,14 +232,14 @@ which will create an `app/board.js` file for bundling. To learn more, plase refe
 <a name=example></a>
 ## Example
 
-The following will create a board called "example" with two rows with the same widget used three times. The first row contains two widget instances (6 cols + 6 cols) and one widget instance (12 cols) in the second row:
+The following will create a board called "example" with two rows with the same widget used three times. The first row contains two widget blocks (6 cols + 6 cols) and one widget block (12 cols) in the second row:
 
     {
         "name": example",
         "displayName": "Example tutorial board",
-        "widgets": [
+        "blocks": [
             {
-                "fullName": "hello.world",
+                "widget": "hello.world",
                 "cols": 6,
                 "colStyle": {
                     "textAlign": "center",
@@ -251,7 +251,7 @@ The following will create a board called "example" with two rows with the same w
                 }
             },
             {
-                "fullName": "hello.world",
+                "widget": "hello.world",
                 "cols": 6,
                 "colStyle": {
                     "textAlign": "center",
@@ -263,7 +263,7 @@ The following will create a board called "example" with two rows with the same w
                 }
             },
             {
-                "fullName": "hello.world",
+                "widget": "hello.world",
                 "cols": 12,
                 "colStyle": {
                     "textAlign": "center",

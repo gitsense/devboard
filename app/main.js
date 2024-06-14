@@ -124,11 +124,12 @@ function DevBoard(board, header) {
 
     function getCards() {
         const cards = [];
+        const { blocks } = board;
 
-        board.widgets.forEach(boardWidgets => {
-            const { fullName } = boardWidgets;
-            const widget = widgets[fullName];
-            const config = configs[fullName];
+        blocks.forEach(block => {
+            const { widget: widgetFullName  } = block;
+            const widget = widgets[widgetFullName];
+            const config = configs[widgetFullName];
 
             if ( !widget ) {
                 console.log(`ERROR: No widget named ${(fullName)} found.`);
@@ -138,29 +139,29 @@ function DevBoard(board, header) {
             const { package, name } = config;
 
             widget.config = config;
-            widget.fullName = fullName;
+            widget.fullName = widgetFullName;
             widget.package = package;
             widget.name = name;
 
-            const card = getCard(widget, boardWidgets);
+            const card = getCard(block, widget);
             cards.push(card);
         });
 
         return cards;
     }
 
-    function getCard(widget, boardWidgets) {
+    function getCard(boardBlock, widget) {
         const { package, name } = widget;
         widget.dataURL = `/api/${apiVersion}/widgets/${package}/${name}/data`;
         widget.staticURL = `/api/${apiVersion}/widgets/${package}/${name}/static/{file}`;
 
-        const card = new Card(widget, boardWidgets, help ? help === "show" : false).create();
+        const card = new Card(boardBlock, widget, help ? help === "show" : false).create();
         card.widgets = widgets;
-        card.params = boardWidgets.params;
+        card.params = boardBlock.params;
         card.board = board;
 
         return card;
     }
 }
 
-module.exports = DevBoard; 2
+module.exports = DevBoard;
