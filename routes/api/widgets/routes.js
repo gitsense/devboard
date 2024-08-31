@@ -35,6 +35,7 @@ router.get("/:package/:name/static/:filename", async (req, res) => {
 
     const base = dirname(dirname(dirname(__dirname)));
     const file = `${base}/packages/${package}/widgets/${name}/static/${filename}`;
+    res.contentType(file);
     res.sendFile(file);
 });
 

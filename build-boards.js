@@ -8,7 +8,7 @@ const defaultConfig = { menu: { boards: [] } };
 
 readdirSync("./packages").forEach(name => {
     const dir = resolve(`./packages/${name}`); 
-    const configFile = resolve(`${dir}/config.json`);
+    const configFile = resolve(`${dir}/package-config.json`);
 
     if ( !existsSync(configFile) ) {
         console.log(`WARNING: ${configFile} does not exists.  Unable to add boards in ${dir}`);

@@ -16,7 +16,7 @@ writeBackend("const widgets = {};\n", true);
 
 readdirSync("./packages").forEach(name => {
     const dir = resolve(`./packages/${name}`); 
-    const configFile = resolve(`${dir}/config.json`);
+    const configFile = resolve(`${dir}/package-config.json`);
 
     if ( !existsSync(configFile) ) {
         console.log(`WARNING: ${configFile} does not exists. Unable to add dashboards in ${dir}`);
@@ -38,7 +38,7 @@ readdirSync("./packages").forEach(name => {
 
     readdirSync(`${widgetsDir}`).forEach(name => {
         const widgetDir = resolve(`${widgetsDir}/${name}`);
-        const configFile = resolve(`${widgetDir}/config.json`);
+        const configFile = resolve(`${widgetDir}/widget-config.json`);
         let fullName = null;
 
         if ( existsSync(configFile) ) {

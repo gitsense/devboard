@@ -1,9 +1,11 @@
 const dayjs = require("dayjs");
 const relativeTime = require("dayjs/plugin/relativeTime");
+const utc = require("dayjs/plugin/utc");
 dayjs.extend(relativeTime);
+dayjs.extend(utc);
 
 const d = {
-    shortAge: (time, offset=4) => {
+    shortAge: (time, offset=0) => {
         let age = dayjs().utc().add(offset, "hours").to(time)
 
         if ( age.match(/^a few seconds/) )

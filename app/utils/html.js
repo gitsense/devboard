@@ -2,6 +2,9 @@ const h = {
     elemById: (id) => {
         return document.getElementById(id);
     },
+    createArticle: (params) => {
+        return createElement("article", params);
+    },
     createBreak: () => {
         return createElement("br");
     },

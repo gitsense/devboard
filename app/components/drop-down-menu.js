@@ -1,10 +1,17 @@
 const h = require("../utils/html.js");
 
-function DropDownMenu(options, selectedPrefix="", opt) {
-    const { callback, btn=false, alignment="se", menuStyle} = opt || {};
+function DropDownMenu(options, menuType="menu: ", opt) {
+    const { 
+        callback, 
+        btn=false, 
+        dropDownClass="color-fg-muted p-2 d-inline", 
+        dropDownStyle, 
+        alignment="se", 
+        menuStyle
+    } = opt || {};
 
     const dropdown = h.createDetail({ cls: "dropdown details-reset details-overlay d-inline-block" });
-    const selected = getSelected(options);
+    const current = getSelected(options);
 
     this.create = function() {
         addSelected()
@@ -18,12 +25,16 @@ function DropDownMenu(options, selectedPrefix="", opt) {
         return container;
     }
 
+    this.getSelected = function() {
+        return current.value;
+    }
+
     function addSelected() {
         const summary = h.createSummary({
-            cls: btn ? "btn" : "color-fg-muted p-2 d-inline",
+            cls: btn ? "btn" : dropDownClass,
             append: [
                 h.createSpan({
-                    html: selectedPrefix+selected.value,
+                    html: menuType+current.value,
                     style: {
                         
                     }
@@ -34,7 +45,8 @@ function DropDownMenu(options, selectedPrefix="", opt) {
                         marginLeft: "5px"
                     }
                 })
-            ]
+            ],
+            style: dropDownStyle
         });
         summary.setAttribute("aria-haspopup", "true");
 
@@ -73,7 +85,7 @@ function DropDownMenu(options, selectedPrefix="", opt) {
             menu.appendChild(li);
 
             if ( !selected && !href && callback ) 
-                item.onclick = () => { callback(value) };
+                item.onclick = () => { callback(current.value, value) };
         }
     }
 
