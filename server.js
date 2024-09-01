@@ -4,6 +4,8 @@ const { readdir, readFile, stat, writeFile } = require("fs/promises");
 const { config: boardConfig, boards } = require("./app/boards.js");
 const { widgets } = require("./libs/widgets.js");
 
+const DEVBOARD_PORT = process.env.DEVBOARD_PORT || 3357;
+
 main();
 
 async function main() {
@@ -19,7 +21,9 @@ async function main() {
     app.use("/--/", express.static("public"));
     app.use("/api/", require("./routes/api/routes.js"));
     app.get("/*", (req, res) => renderBoard(req, res) );
-    app.listen(3357);
+    app.listen(DEVBOARD_PORT);
+
+    console.log(`Server up and running on port ${DEVBOARD_PORT}`);
 
     async function initWidgets() {
         for ( const fullName in widgets ) {
