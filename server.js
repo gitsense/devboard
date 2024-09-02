@@ -43,17 +43,30 @@ async function renderBoard(req, res, match) {
     const { board: queryBoard, pid } = query;
     const { header={ show: true }, menu={}, quickLinks={} } = boardConfig || {};
     const selectedBoard = queryBoard ? boards[queryBoard] : null;
-    const defaultBoard = boards[menu.boards[0].fullName];
+    const defaultBoard = getDefaultBoard(menu.boards);
     const menuBoards = menu.boards ? getBoards(menu.boards) : [];
     const quickLinksBoards = quickLinks.boards ? getBoards(quickLinks.boards) : [];
     const headerConfig = { menuBoards, quickLinks: quickLinksBoards, header };
     const tmpl = await readFile("./views/index.html", "utf8");
+
+    console.log(defaultBoard);
 
     const html = tmpl
         .replace(/\s*=\s*{{board}}/, " = "+JSON.stringify(selectedBoard || defaultBoard))
         .replace(/\s*=\s*{{header}}/, " = "+JSON.stringify(headerConfig));
 
     res.send(html);
+}
+
+function getDefaultBoard(configBoards) {
+    for ( let i = 0; i < configBoards.length; i++ ) {
+        const { default: isDefault, fullName } = configBoards[i];;
+
+        if ( isDefault )
+            return boards[fullName];
+    }
+
+    return boards[configBoards[0].fullName];
 }
 
 function getBoards(configBoards) {
