@@ -34,6 +34,9 @@ readdirSync("./packages").forEach(name => {
 
     const widgetsDir = resolve(`${dir}/widgets`);
 
+    if ( !existsSync(widgetsDir) ) 
+        return;
+
     configs[package.name] = package;
 
     readdirSync(`${widgetsDir}`).forEach(name => {
