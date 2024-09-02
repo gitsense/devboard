@@ -30,6 +30,8 @@ readdirSync("./packages").forEach(name => {
         if ( !name.match(/.json$/) ) 
             return;
 
+        console.log(`Processing board config ${file}`);
+
         const board = JSON.parse(readFileSync(file, "utf8"));
         const { name: boardName, displayName, blocks } = board;
 
