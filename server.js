@@ -49,8 +49,6 @@ async function renderBoard(req, res, match) {
     const headerConfig = { menuBoards, quickLinks: quickLinksBoards, header };
     const tmpl = await readFile("./views/index.html", "utf8");
 
-    console.log(defaultBoard);
-
     const html = tmpl
         .replace(/\s*=\s*{{board}}/, " = "+JSON.stringify(selectedBoard || defaultBoard))
         .replace(/\s*=\s*{{header}}/, " = "+JSON.stringify(headerConfig));
