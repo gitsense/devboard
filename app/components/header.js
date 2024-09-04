@@ -30,7 +30,8 @@ function Header(currentBoard, menuBoards, quickLinks) {
                 display: "inline-block",
                 width: `calc(100% - ${(menusWidth+optionsWidth)}px)`,
                 textAlign: "center",
-                verticalAlign: "middle"
+                verticalAlign: "middle",
+                //fontWeight: 500
             }
         });
 
@@ -111,10 +112,25 @@ function Header(currentBoard, menuBoards, quickLinks) {
 
     function renderQuickLinks() {
         const { pathname } = window.location;
-        const usp = new URLSearchParams(window.location.search);
+        const usp = new URLSearchParams();
+        let current = getFullname(currentBoard);
 
         quickLinks.forEach(board => {
             const { fullName, displayName, text, href } = board;
+
+            //if ( fullName === current ) {
+            //    quickLinksBody.appendChild(h.createSpan({
+            //        text: text || displayName,
+            //        style: {
+            //            padding: "6px",
+            //            marginRight: "5px",
+            //            borderBottom: "2px solid orange",
+            //        }
+            //    }));
+
+            //    return;
+            //} 
+
             let boardHref = null;
 
             if ( fullName ) {
@@ -122,11 +138,16 @@ function Header(currentBoard, menuBoards, quickLinks) {
                 boardHref = pathname+"?"+usp.toString();
             }
 
+            const bbColor = fullName === current ? "orange" : "transparent";
+
             const link = h.createLink({
                 text: text || displayName,
                 href: href || boardHref,
                 style: {
-                    marginRight: "20px"
+                    color: "black",
+                    padding: "6px",
+                    borderBottom: "2px solid "+bbColor,
+                    marginRight: "5px"
                 }
             });
 
