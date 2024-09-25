@@ -20,7 +20,7 @@ const h = {
         if ( checked )
             checkbox.checked = checked;
     
-        if ( disabled !== undefined )
+        if ( disabled != null )
             checkbox.disabled = disabled;
     
         return checkbox;
@@ -30,6 +30,9 @@ const h = {
     },
     createDiv: (params) => {
         return createElement("div", params);
+    },
+    createForm: (params) => {
+        return createElement("form", params);
     },
     createInput: (params) => {
         return createElement("input", params);
@@ -67,7 +70,7 @@ const h = {
         // for is a reserved word
         let { for: _for } = params;
 
-        if ( _for !== undefined )
+        if ( _for != null )
             label.setAttribute("for", _for);
 
         return label;
@@ -108,6 +111,9 @@ const h = {
     },
     createSummary: (params) => {
         return createElement("summary", params);
+    },
+    createTextArea: (params) => {
+        return createElement("textarea", params);
     },
     createTextNode: (text) => {
         return document.createTextNode(text);
@@ -161,9 +167,9 @@ function createElement(type, params) {
     if ( !params )
         return elem;
 
-    let { id, ariaLabel, role, html, text, cls, pointerEvents, title, style, append } = params;
+    let { id, ariaLabel, role, html, text, cls, pointerEvents, title, style, append, debug=false } = params;
 
-    if ( id !== undefined )
+    if ( id != null )
         elem.id = id;
 
     if ( ariaLabel )
@@ -172,12 +178,12 @@ function createElement(type, params) {
     if ( role )
         elem.setAttribute("role", role);
 
-    if ( html !== undefined ) {
+    if ( html != null ) {
         if ( typeof(html) === "object" )
             elem.appendChild(html);
         else
             elem.innerHTML = html;
-    } else if ( text !== undefined ) {
+    } else if ( text != null ) {
         elem.innerText = text;
     }
 
@@ -187,11 +193,11 @@ function createElement(type, params) {
     if ( pointerEvents )
         elem.setAttribute("pointer-events", pointerEvents);
 
-    if ( title !== undefined )
+    if ( title != null )
         elem.setAttribute("title", title);
 
     if ( append ) {
-        if ( append.length !== undefined ) {
+        if ( append.length != null ) {
             append.forEach(e => {
                 if ( e === undefined || e === null )
                     return;
