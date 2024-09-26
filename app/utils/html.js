@@ -136,6 +136,20 @@ const h = {
     createTableRow: (params) => {
         return createElement("tr", params);
     },
+    createTextInput: (params) => {
+        let input = createElement("input", params);
+        input.type = "text";
+
+        let { disabled, value } = params || {};
+
+        if ( value != null )
+            input.value = value;
+    
+        if ( disabled != null )
+            input.disabled = disabled;
+    
+        return input;
+    },
     createUL: (params) => {
         return createElement("ul", params);
     },
