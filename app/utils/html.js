@@ -112,6 +112,9 @@ const h = {
     createSummary: (params) => {
         return createElement("summary", params);
     },
+    createSup: (params) => {
+        return createElement("sup", params);
+    },
     createTextArea: (params) => {
         return createElement("textarea", params);
     },
