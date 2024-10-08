@@ -5,12 +5,16 @@ function DropDownMenu(options, menuType="menu: ", opt) {
         callback, 
         btn=false, 
         dropDownClass="color-fg-muted p-2 d-inline", 
-        dropDownStyle, 
+        dropDownStyle,
+        containerStyle,
         alignment="se", 
         menuStyle
     } = opt || {};
 
-    const dropdown = h.createDetail({ cls: "dropdown details-reset details-overlay d-inline-block" });
+    const dropdown = h.createDetail({ 
+        cls: "dropdown details-reset details-overlay d-inline-block",
+        style: containerStyle
+    });
     const current = getSelected(options);
 
     this.create = function() {
@@ -30,11 +34,13 @@ function DropDownMenu(options, menuType="menu: ", opt) {
     }
 
     function addSelected() {
+        const { value, label } = current;
+
         const summary = h.createSummary({
             cls: btn ? "btn" : dropDownClass,
             append: [
                 h.createSpan({
-                    html: menuType+current.value,
+                    html: label || menuType+current.value,
                     style: {
                         
                     }
@@ -62,7 +68,7 @@ function DropDownMenu(options, menuType="menu: ", opt) {
         dropdown.appendChild(menu);
 
         for ( let i = 0; i < options.length; i++ ) {
-            let { value, href, selected } = options[i];
+            let { value, returnValue, href, selected } = options[i];
 
             let item = selected ?
                 h.createSpan({
@@ -84,8 +90,11 @@ function DropDownMenu(options, menuType="menu: ", opt) {
 
             menu.appendChild(li);
 
-            if ( !selected && !href && callback ) 
-                item.onclick = () => { callback(current.value, value) };
+            if ( !selected && !href && callback ) {
+                item.onclick = () => { 
+                    callback(current.returnValue || current.value, returnValue || value) 
+                };
+            }
         }
     }
 
