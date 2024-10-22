@@ -92,7 +92,8 @@ function DropDownMenu(options, menuType="menu: ", opt) {
 
             if ( !selected && !href && callback ) {
                 item.onclick = () => { 
-                    callback(current.returnValue || current.value, returnValue || value) 
+                    callback(current.returnValue || current.value, returnValue || value);
+                    dropdown.removeAttribute("open");
                 };
             }
         }
