@@ -27,7 +27,7 @@ function Card(boardBlock, boardWidget, showHelp=false) {
                 append: [this.outside],
                 cls: "tblr-col-lg-"+cols,
                 style: {
-                    display: show ? null : "none",
+                    display: show && cols !== 0 ? null : "none",
                 }
             });
 
