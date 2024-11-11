@@ -12,7 +12,7 @@ async function main() {
     try {
         await initWidgets();
     } catch ( error ) {
-        console.log(`ERROR: Initializing widgets failed:\n${error}`);
+        throw new Error(`Initialize widgets failed:\n${error}`);
     }
 
     const app = express();
@@ -28,7 +28,7 @@ async function main() {
     async function initWidgets() {
         for ( const fullName in widgets ) {
             const widget = widgets[fullName];
-        
+
             if ( widget.init ) {
                 console.log(`Initializing widget ${fullName}`);
                 await widget.init();
